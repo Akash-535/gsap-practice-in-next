@@ -18,14 +18,14 @@ const ImageReavelAnimation = () => {
         start: "15% bottom",
         toggleActions: "play none none reset",
       },
-      stagger: 1.6,
+      stagger: 0.4,
     });
   }, []);
   return (
     <>
       <div
         ref={sectionRef}
-        className="min-h-screen flex justify-center items-center bg-red-500/50 section flex-col py-10 gap-10"
+        className="min-h-screen flex justify-center items-center bg-red-500/50 section flex-col py-10 gap-10 overflow-hidden"
       >
         <h2 className="text-white font-bold text-4xl text-center uppercase">
           Image Reavel Animation

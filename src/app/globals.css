@@ -5,3 +5,8 @@
 body {
   font-family: "Source Code Pro", monospace;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+}

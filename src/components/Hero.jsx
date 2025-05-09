@@ -8,17 +8,9 @@ const Hero = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray(".animate-card");
-
-      gsap.set(cards, {
-        transformOrigin: "center center",
-        perspective: 1000,
-        rotationX: -90,
-      });
-
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".gsap-parent",
+          trigger: ".gsap-parent-element",
           start: "top top",
           end: "800% bottom",
           scrub: 3,
@@ -26,7 +18,7 @@ const Hero = () => {
         },
       });
 
-      tl.to(cards, {
+      tl.to(".animate-card", {
         bottom: "50%",
         translateY: "50%",
         rotationX: 0,
@@ -46,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full relative min-h-screen gsap-parent overflow-hidden bg-gradient-to-br from-black via-violet-300 to-gray-900">
+    <div className="w-full relative min-h-screen gsap-parent-element overflow-hidden bg-gradient-to-br from-black via-violet-300 to-gray-900">
       <div className="size-[300px] bg-black absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 max-h-[300px] z-[1] rounded-[50%]"></div>
       <div className="size-[300px] bg-red-400 absolute -bottom-full left-1/2 -translate-x-1/2 max-h-[300px] z-[2] animate-card"></div>
       <div className="size-[300px] bg-green-400 absolute -bottom-full left-1/2 -translate-x-1/2 max-h-[300px] z-[3] animate-card"></div>

@@ -50,7 +50,7 @@ const TextAnimation = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".gsap-parent",
+        trigger: ".parent",
         start: "top , top",
         end: "500% , bottom",
         scrub: 3,
@@ -63,30 +63,30 @@ const TextAnimation = () => {
       {
         opacity: "0",
         duration: 1,
-        stagger: 0.5,
+        stagger: 1,
       },
       {
         opacity: "1",
         duration: 1,
-        stagger: 0.5,
+        stagger: 1,
       }
     ).fromTo(
       splitTwoInstance.chars,
       {
         color: "white",
         duration: 1,
-        stagger: 0.5,
+        stagger: 1.5,
       },
       {
         color: "red",
         duration: 1,
-        stagger: 0.5,
+        stagger: 1.5,
       }
     );
   }, []);
 
   return (
-    <div className="py-10 bg-black min-h-screen text-white gsap-parent">
+    <div className="py-10 bg-black min-h-screen text-white parent flex flex-col justify-center items-center w-full px-4">
       <div className="max-w-[950px] mx-auto w-full overflow-hidden flex flex-col gap-10">
         <div className="w-full">
           <p className="font-bold pb-4 text-2xl simple-heading">

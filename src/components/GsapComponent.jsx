@@ -47,8 +47,8 @@ const GsapComponent = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-green-300 flex flex-col gap-10 justify-center items-center py-20 section overflow-hidden">
-      {/* <div className="size-40 flex justify-center items-center text-xl font-bold text-white bg-red-500 h-40 to-box">
+    <div className="w-full min-h-screen bg-green-300 flex flex-col gap-10 justify-center items-center py-20 overflow-hidden">
+      <div className="size-40 flex justify-center items-center text-xl font-bold text-white bg-red-500 h-40 to-box">
         gsap.to()
       </div>
       <div className="size-40 flex justify-center items-center text-xl font-bold text-white bg-blue-500 h-40 from-box">
@@ -59,7 +59,7 @@ const GsapComponent = () => {
       </div>
       <div className="size-40 flex justify-center items-center text-xl font-bold text-white bg-yellow-500 h-40 set-box">
         gsap.set()
-      </div> */}
+      </div>
     </div>
   );
 };
