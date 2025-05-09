@@ -34,7 +34,8 @@ const ThreeD = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex justify-center items-center py-10 section bg-black">
+    <div className="min-h-screen flex items-center py-10 section bg-black overflow-hidden flex-col gap-20">
+      <h2 className="text-4xl text-white text-center font-bold">3D CUBE</h2>
       <div
         className="relative size-[150px] drag-box transform-3d rotate-y-45 rotate-x-45"
         style={{ transformOrigin: "center center" }}
